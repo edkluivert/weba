@@ -36,9 +36,9 @@ class ProductCard extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min, // Important: removes extra space
+          mainAxisSize: MainAxisSize.min,
           children: [
-            // Image Container - 60%
+
             ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(20),
@@ -95,7 +95,7 @@ class ProductCard extends StatelessWidget {
                       );
                     }),
                   ),
-                  const SizedBox(height: 16), // Consistent spacing
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
