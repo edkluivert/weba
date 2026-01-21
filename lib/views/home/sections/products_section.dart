@@ -74,7 +74,7 @@ class _ProductsSectionState extends State<ProductsSection> {
                   crossAxisCount: crossAxisCount,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  childAspectRatio: 0.9,
+                  childAspectRatio: 0.85,
                   mainAxisSpacing: 24,
                   crossAxisSpacing: 24,
                   children: const [
