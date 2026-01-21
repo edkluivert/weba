@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,12 +28,36 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>weba</title>
   <link rel="manifest" href="manifest.json">
+  <script>
+    // Global error handler to catch startup errors
+    window.addEventListener('error', function (event) {
+      var errorBanner = document.getElementById('error-banner');
+      if (!errorBanner) {
+        errorBanner = document.createElement('div');
+        errorBanner.id = 'error-banner';
+        errorBanner.style.position = 'fixed';
+        errorBanner.style.top = '0';
+        errorBanner.style.left = '0';
+        errorBanner.style.width = '100%';
+        errorBanner.style.backgroundColor = 'red';
+        errorBanner.style.color = 'white';
+        errorBanner.style.padding = '10px';
+        errorBanner.style.zIndex = '9999';
+        errorBanner.style.fontFamily = 'monospace';
+        errorBanner.style.whiteSpace = 'pre-wrap';
+        document.body.appendChild(errorBanner);
+      }
+      errorBanner.innerText += 'Error: ' + event.message + '\n';
+    });
+  </script>
 </head>
+
 <body>
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
